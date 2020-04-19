@@ -21,7 +21,7 @@ class Menu extends Phaser.Scene {
         // menu display
         let menuConfig = {
             fontFamily: 'Courier',
-            fontSize: '28px',
+            fontSize: '50px',
             backgroundColor: '#4D4373',
             color: '#BBBDF2',
             align: 'right',
@@ -37,10 +37,13 @@ class Menu extends Phaser.Scene {
         let centerY = game.config.height/2;
         let textSpacer = 64;
 
-        this.add.text(centerX, centerY - textSpacer, 'BESITO PATROL', menuConfig).setOrigin(0.5);
+        this.add.text(centerX, centerY - textSpacer - 12, 'BESITO PATROL', menuConfig).setOrigin(0.5);
+        menuConfig.fontSize = '25px';
+        menuConfig.backgroundColor = '#BBBDF2';
+        menuConfig.color = '#4D4373';
         this.add.text(centerX, centerY, 'Use ⭠⭢ arrows to move & (S) to Smooch', menuConfig).setOrigin(0.5);
-        menuConfig.backgroundColor = '#D95291';
-        menuConfig.color = '#FFB8D9';
+        //menuConfig.backgroundColor = '#D95291';
+        menuConfig.color = '#D95291';
         this.add.text(centerX, centerY + textSpacer, 'Press ⭠ for Easy or ⭢ for Hard', menuConfig).setOrigin(0.5);
         
         // define keys

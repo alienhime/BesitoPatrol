@@ -23,7 +23,7 @@ class Play extends Phaser.Scene {
         this.anims.create({
             key: 'fly',
             frames: this.anims.generateFrameNumbers('bat', {start: 0, end: 1, first: 0}),
-            frameRate: 15,
+            frameRate: 10,
             repeat: -1
         })
 
